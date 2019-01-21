@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: url("stars.jpeg");
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -3;
+    flex-direction: column;
+}
+.title {
+
+    font-size: 100px;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    color: skyblue;
+    opacity: 0;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: title;
+    animation-timing-function: ease-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes title {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation-delay: 0s;
+    animation-duration: 17s;
+    animation-name: logo;
+    animation-timing-function: ease-out;
+    z-index: -3;
+    
+    opacity: 0;
+}
+@keyframes logo {
+    0%   { transform: scale(1); opacity: 0; }
+    30%  { transform: scale(1); opacity: 1; }
+    95%  { transform: scale(0.2); opacity: 1; }
+    100% { transform: scale(0.2); opacity: 0; }
+}
+.defil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    margin: 0 0 0 -500px;
+    top: auto;
+    bottom: 0;
+    height: 50em;
+    color: yellow;    
+    font-size: 64px;
+    text-align: justify;
+    transform-origin: center bottom;
+    transform: perspective(300px) rotateX(25deg);
+}
+
+.defil > div {
+    
+    position: absolute;
+    top: 100%; 
+    animation-delay: 12s; 
+    animation-duration: 40s;
+    animation-name: defil;
+    animation-timing-function: linear;
+}
+
+@keyframes defil {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1; 
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+}
